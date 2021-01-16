@@ -1,0 +1,96 @@
+INFO  2021-01-16 17:59:08.339 +0900 main : com.tableau.oauthservices.OAuthServiceMain - OAuthProvider Server starting.
+INFO  2021-01-16 17:59:08.341 +0900 main : com.tableau.core.ParentProcessMonitor - Starting to monitor parent process pid: 7216
+INFO  2021-01-16 17:59:11.281 +0900 main : com.tableau.grpc.OAuthLibraryGrpcServer - OAuthProviderService started, listening on 2016.
+INFO  2021-01-16 17:59:11.777 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - Calling into initialAuthorization call
+INFO  2021-01-16 17:59:11.845 +0900 grpc-default-executor-0 : com.tableau.utils.HttpsProxyHelper - Setting up the keystore values.
+INFO  2021-01-16 17:59:12.306 +0900 grpc-default-executor-0 : com.tableau.utils.HttpsProxyHelper - We have set up the security managers, getting ssl context.
+INFO  2021-01-16 17:59:12.386 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - No client id is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 17:59:12.388 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - No client secret is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 17:59:12.388 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - No redirect url is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 17:59:12.415 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - Using loopback host: 127.0.0.1
+INFO  2021-01-16 17:59:12.415 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - Start code receiver on a random available port.
+INFO  2021-01-16 17:59:12.468 +0900 grpc-default-executor-0 : com.tableau.googlerequestors.GoogleRequestor - Attempting to get the redirectUri from the receiver.
+INFO  2021-01-16 17:59:12.468 +0900 grpc-default-executor-0 : com.tableau.googlerequestors.GoogleRequestor - Opening up external browser for authentication flow at: http://127.0.0.1:2019/Callback
+INFO  2021-01-16 17:59:12.476 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - PKCE is required for this connector, generating PKCE values for request.
+INFO  2021-01-16 17:59:12.635 +0900 grpc-default-executor-0 : com.tableau.utils.LoadBrowserHelper - Browsing is available.
+INFO  2021-01-16 17:59:12.636 +0900 grpc-default-executor-0 : com.tableau.utils.LoadBrowserHelper - Sending browser to: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=414627074249.apps.googleusercontent.com&code_challenge=EqEdAVz9L3ceB4-RZu_X6nClw_9h93yyOLKyr2uQe_8&code_challenge_method=S256&redirect_uri=http://127.0.0.1:2019/Callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/bigquery%20https://www.googleapis.com/auth/cloudplatformprojects.readonly&state=o841pklq2kvhip3ed1rv9t65qa
+ERROR 2021-01-16 17:59:23.425 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: CLIENTSECRET requested, or param does not exist in map.
+ERROR 2021-01-16 17:59:23.425 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: CLIENTID requested, or param does not exist in map.
+ERROR 2021-01-16 17:59:23.425 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: access-token-issue-time requested, or param does not exist in map.
+INFO  2021-01-16 17:59:23.426 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - Tokens returned from grpc call: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 17:59:23.426 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - Tokens returned from grpc call: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 17:59:23.428 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: CLIENTSECRET
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: ACCESSTOKEN
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: id-token
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: REFRESHTOKEN
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: access-token-expires-in
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: CLIENTID
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: username
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to build the response.
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - response: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 17:59:23.429 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - response: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 17:59:23.482 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - Calling into OAuthLibraryGrpcService.refreshAccessToken
+INFO  2021-01-16 17:59:23.482 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - Get client id from provided connection attributes.
+INFO  2021-01-16 17:59:23.482 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - Get client secret from provided connection attributes.
+INFO  2021-01-16 17:59:23.482 +0900 grpc-default-executor-0 : com.tableau.baserequestors.BaseOAuthRequestor - No redirect url is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 17:59:23.774 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - Tokens returned from grpc call: {ACCESSTOKEN=********, access-token-expires-in=3599, access-token-issue-time=1610787563774}
+INFO  2021-01-16 17:59:23.774 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: ACCESSTOKEN
+INFO  2021-01-16 17:59:23.774 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: access-token-expires-in
+INFO  2021-01-16 17:59:23.774 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: access-token-issue-time
+INFO  2021-01-16 17:59:23.774 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to build the response.
+INFO  2021-01-16 17:59:23.775 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - response: {ACCESSTOKEN=********, access-token-expires-in=3599, access-token-issue-time=1610787563774}
+INFO  2021-01-16 17:59:23.775 +0900 grpc-default-executor-0 : com.tableau.grpc.OAuthLibraryGrpcService - refreshAccessToken response: {ACCESSTOKEN=********, access-token-expires-in=3599, access-token-issue-time=1610787563774}
+INFO  2021-01-16 18:14:54.625 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - Calling into initialAuthorization call
+INFO  2021-01-16 18:14:54.626 +0900 grpc-default-executor-1 : com.tableau.utils.HttpsProxyHelper - We have set up the security managers, getting ssl context.
+INFO  2021-01-16 18:14:54.626 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - No client id is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 18:14:54.627 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - No client secret is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 18:14:54.627 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - No redirect url is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 18:14:54.627 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - Using loopback host: 127.0.0.1
+INFO  2021-01-16 18:14:54.627 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - Start code receiver on a random available port.
+INFO  2021-01-16 18:14:54.630 +0900 grpc-default-executor-1 : com.tableau.googlerequestors.GoogleRequestor - Attempting to get the redirectUri from the receiver.
+INFO  2021-01-16 18:14:54.630 +0900 grpc-default-executor-1 : com.tableau.googlerequestors.GoogleRequestor - Opening up external browser for authentication flow at: http://127.0.0.1:2345/Callback
+INFO  2021-01-16 18:14:54.631 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - PKCE is required for this connector, generating PKCE values for request.
+INFO  2021-01-16 18:14:54.631 +0900 grpc-default-executor-1 : com.tableau.utils.LoadBrowserHelper - Browsing is available.
+INFO  2021-01-16 18:14:54.631 +0900 grpc-default-executor-1 : com.tableau.utils.LoadBrowserHelper - Sending browser to: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=414627074249.apps.googleusercontent.com&code_challenge=cqDGqM9x8SMi-xfXegq_OBKeWSbW6QvHExiCHYIUtDU&code_challenge_method=S256&redirect_uri=http://127.0.0.1:2345/Callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/bigquery%20https://www.googleapis.com/auth/cloudplatformprojects.readonly&state=msv3d7jfrd828vqirj7ghgla44
+ERROR 2021-01-16 18:15:22.306 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: CLIENTSECRET requested, or param does not exist in map.
+ERROR 2021-01-16 18:15:22.306 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: CLIENTID requested, or param does not exist in map.
+ERROR 2021-01-16 18:15:22.306 +0900 grpc-default-executor-1 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: access-token-issue-time requested, or param does not exist in map.
+INFO  2021-01-16 18:15:22.306 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - Tokens returned from grpc call: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 18:15:22.306 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - Tokens returned from grpc call: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: CLIENTSECRET
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: ACCESSTOKEN
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: id-token
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: REFRESHTOKEN
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: access-token-expires-in
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: CLIENTID
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: username
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to build the response.
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - response: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 18:15:22.307 +0900 grpc-default-executor-1 : com.tableau.grpc.OAuthLibraryGrpcService - response: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 18:16:32.952 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - Calling into initialAuthorization call
+INFO  2021-01-16 18:16:32.952 +0900 grpc-default-executor-2 : com.tableau.utils.HttpsProxyHelper - We have set up the security managers, getting ssl context.
+INFO  2021-01-16 18:16:32.952 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - No client id is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 18:16:32.953 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - No client secret is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 18:16:32.953 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - No redirect url is passed into oauth service, get it from oauth config.
+INFO  2021-01-16 18:16:32.953 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - Using loopback host: 127.0.0.1
+INFO  2021-01-16 18:16:32.953 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - Start code receiver on a random available port.
+INFO  2021-01-16 18:16:32.956 +0900 grpc-default-executor-2 : com.tableau.googlerequestors.GoogleRequestor - Attempting to get the redirectUri from the receiver.
+INFO  2021-01-16 18:16:32.956 +0900 grpc-default-executor-2 : com.tableau.googlerequestors.GoogleRequestor - Opening up external browser for authentication flow at: http://127.0.0.1:2378/Callback
+INFO  2021-01-16 18:16:32.956 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - PKCE is required for this connector, generating PKCE values for request.
+INFO  2021-01-16 18:16:32.956 +0900 grpc-default-executor-2 : com.tableau.utils.LoadBrowserHelper - Browsing is available.
+INFO  2021-01-16 18:16:32.957 +0900 grpc-default-executor-2 : com.tableau.utils.LoadBrowserHelper - Sending browser to: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=414627074249.apps.googleusercontent.com&code_challenge=BqQpYCNgtALXpl049_pSl7c3lLxeAIXemYsHo6ltJ0s&code_challenge_method=S256&redirect_uri=http://127.0.0.1:2378/Callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/bigquery%20https://www.googleapis.com/auth/cloudplatformprojects.readonly&state=kg2f46ts6aj9b4ceculr37ieb8
+ERROR 2021-01-16 18:16:40.752 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: CLIENTSECRET requested, or param does not exist in map.
+ERROR 2021-01-16 18:16:40.752 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: CLIENTID requested, or param does not exist in map.
+ERROR 2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.baserequestors.BaseOAuthRequestor - Invalid param: access-token-issue-time requested, or param does not exist in map.
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - Tokens returned from grpc call: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - Tokens returned from grpc call: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: CLIENTSECRET
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: ACCESSTOKEN
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: id-token
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: REFRESHTOKEN
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: access-token-expires-in
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: CLIENTID
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to place token: username
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - attempting to build the response.
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - response: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
+INFO  2021-01-16 18:16:40.753 +0900 grpc-default-executor-2 : com.tableau.grpc.OAuthLibraryGrpcService - response: {CLIENTSECRET=********, ACCESSTOKEN=********, id-token=********, REFRESHTOKEN=********, access-token-expires-in=3599, CLIENTID=********, username=eminhwan12@gmail.com}
